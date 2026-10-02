@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family:
+        Arial,
+        "Noto Sans JP",
+        sans-serif;
+
+    background: #0f0f0f;
+
+    color: white;
+}
+
+
+/* =========================
+   ヘッダー
+========================= */
+
+header {
+
+    padding: 35px 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #181818,
+            #292929
+        );
+
+    border-bottom: 1px solid #333;
+}
+
+header h1 {
+
+    margin: 0 0 8px;
+
+    font-size: 32px;
+}
+
+header p {
+
+    margin: 0;
+
+    color: #aaa;
+}
+
+
+/* =========================
+   メイン
+========================= */
+
+main {
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding: 40px;
+}
+
+
+/* =========================
+   セクション
+========================= */
+
+.video-section {
+
+    margin-bottom: 60px;
+}
+
+.video-section h2 {
+
+    font-size: 24px;
+
+    margin-bottom: 20px;
+
+    border-left: 5px solid #ff0033;
+
+    padding-left: 12px;
+}
+
+
+/* =========================
+   動画グリッド
+========================= */
+
+.video-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(350px, 1fr)
+        );
+
+    gap: 25px;
+}
+
+
+/* =========================
+   動画カード
+========================= */
+
+.video-card {
+
+    background: #181818;
+
+    border-radius: 14px;
+
+    padding: 12px;
+
+    transition:
+        transform 0.2s,
+        background 0.2s;
+}
+
+.video-card:hover {
+
+    transform: translateY(-4px);
+
+    background: #222;
+}
+
+
+/* =========================
+   iframe
+========================= */
+
+.video-card iframe {
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    border: none;
+
+    border-radius: 10px;
+
+    display: block;
+}
+
+
+/* =========================
+   タイトル
+========================= */
+
+.video-card h3 {
+
+    margin:
+
+        14px
+        5px
+        5px;
+
+    font-size: 17px;
+}
+
+.video-card p {
+
+    margin:
+
+        0
+        5px
+        5px;
+
+    color: #aaa;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   フッター
+========================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 50px;
+
+    color: #666;
+
+    border-top: 1px solid #222;
+}
+
+
+/* =========================
+   スマホ
+========================= */
+
+@media (max-width: 700px) {
+
+    header {
+
+        padding: 25px;
+    }
+
+    header h1 {
+
+        font-size: 24px;
+    }
+
+    main {
+
+        padding: 20px;
+    }
+
+    .video-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+}
